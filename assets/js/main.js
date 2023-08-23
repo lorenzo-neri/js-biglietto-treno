@@ -18,3 +18,14 @@ tools
 - console.log
 */
 
+//chiedo il numero di km da percorrere
+
+//chiedo quanti anni ha il passeggero
+
+//calcolo il prezzo del biglietto sulla base di 0.21 € al km
+
+//i minorenni pagano il 20% in meno
+
+//gli over 65 pagano il 40% in meno
+
+//stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
