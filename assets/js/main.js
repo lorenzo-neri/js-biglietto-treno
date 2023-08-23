@@ -36,8 +36,12 @@ let prezzoFinale;
 if(etaPasseggero < 18){
     const prezzoBigliettoMinori = prezzoBiglietto - ((prezzoBiglietto * 20) / 100);
     console.log(prezzoBigliettoMinori);
-}
 
 //gli over 65 pagano il 40% in meno
+} else if (etaPasseggero >= 65){
+    const prezzoBigliettoOver = prezzoBiglietto - ((prezzoBiglietto * 40) / 100);
+    console.log(prezzoBigliettoOver);
+}
+
 
 //stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
