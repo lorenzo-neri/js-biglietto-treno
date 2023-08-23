@@ -27,26 +27,33 @@ const etaPasseggero = Number(prompt('Quanti anni hai?'));
 console.log(etaPasseggero);
 
 //calcolo il prezzo del biglietto sulla base di 0.21 € al km
-if (kmPercorsi > 0 && etaPasseggero > 0){
-    const prezzoBiglietto = (kmPercorsi * 0.21);
-    console.log(prezzoBiglietto);
-    
+if (kmPercorsi > 0 && etaPasseggero > 0) {
+    let prezzoBiglietto = (kmPercorsi * 0.21);
+    console.log(prezzoBiglietto.toFixed(2));
+
     //i minorenni pagano il 20% in meno
     if(etaPasseggero < 18){
-        const prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto * 20) / 100);
-        console.log(prezzoBiglietto);
+        prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto * 20) / 100);
+        console.log(prezzoBiglietto.toFixed(2));
     
     //gli over 65 pagano il 40% in meno
     } else if (etaPasseggero >= 65){
-        const prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto * 40) / 100);
-        console.log(prezzoBiglietto);
+        prezzoBiglietto = prezzoBiglietto - ((prezzoBiglietto * 40) / 100);
+        console.log(prezzoBiglietto.toFixed(2));
     }
 
+    //stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
+
+    const divPrezzoBiglietto = document.getElementById('prezzo_biglietto');
+    console.info(divPrezzoBiglietto);
+
+    divPrezzoBiglietto.innerHTML = 'Questo è l\'importo da pagare per il biglietto: ' + prezzoBiglietto.toFixed(2) + ' €';
+
+    /* prezzoBiglietto.innerHTML = `Questo è l'importo da pagare per il biglietto: ${prezzoBiglietto.toFixed(2) + '€'} `; */
+} else {
+    alert('Dati errati o mancanti');
+    location.reload();
 }
 
-//stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
 
-const prezzoBiglietto = document.getElementById('prezzo_biglietto');
-
-prezzoBiglietto.innerHTML = `Questo è l'importo da pagare per il biglietto: ${prezzoBiglietto.toFixed(2) + '€'} `;
 
