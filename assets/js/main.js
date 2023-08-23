@@ -34,7 +34,7 @@ let prezzoFinale;
 
 //i minorenni pagano il 20% in meno
 if(etaPasseggero < 18){
-    const prezzoBigliettoMinori = prezzoBiglietto - 20 %
+    const prezzoBigliettoMinori = prezzoBiglietto - ((prezzoBiglietto * 20) / 100);
     console.log(prezzoBigliettoMinori);
 }
 
