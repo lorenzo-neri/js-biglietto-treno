@@ -48,7 +48,5 @@ if (kmPercorsi > 0 && etaPasseggero > 0){
 
 const prezzoBiglietto = document.getElementById('prezzo_biglietto');
 
-prezzoBigletto.innerHTML = `Questo è l'importo da pagare per il biglietto: ${prezzoBiglietto} `;
+prezzoBiglietto.innerHTML = `Questo è l'importo da pagare per il biglietto: ${prezzoBiglietto.toFixed(2) + '€'} `;
 
-
-//.toFixed(2) + '€'
