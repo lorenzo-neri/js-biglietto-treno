@@ -28,20 +28,18 @@ console.log(etaPasseggero);
 
 //calcolo il prezzo del biglietto sulla base di 0.21 € al km
 const prezzoBiglietto = (kmPercorsi * 0.21);
-console.log(prezzoBiglietto);
-
-let prezzoFinale;
+console.log(prezzoBiglietto.toFixed(2) + '€');
 
 //i minorenni pagano il 20% in meno
 if(etaPasseggero < 18){
     const prezzoBigliettoMinori = prezzoBiglietto - ((prezzoBiglietto * 20) / 100);
-    console.log(prezzoBigliettoMinori);
+    console.log(prezzoBigliettoMinori.toFixed(2) + '€');
 
 //gli over 65 pagano il 40% in meno
 } else if (etaPasseggero >= 65){
     const prezzoBigliettoOver = prezzoBiglietto - ((prezzoBiglietto * 40) / 100);
-    console.log(prezzoBigliettoOver);
+    console.log(prezzoBigliettoOver.toFixed(2) + '€');
 }
 
-
 //stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
+
