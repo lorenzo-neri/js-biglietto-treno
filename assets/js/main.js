@@ -43,3 +43,8 @@ if(etaPasseggero < 18){
 
 //stampo il prezzo finale con un massimo di due cifre decimali (centesimi)
 
+const prezzoFinale = prezzoBiglietto, prezzoBigliettoMinori, prezzoBigliettoOver = document.getElementById('prezzo_biglietto')
+
+console.log(prezzoFinale);
+
+prezzoFinale.innerHTML = `Questo è l'importo da pagare per il biglietto: ${prezzoFinale} `
