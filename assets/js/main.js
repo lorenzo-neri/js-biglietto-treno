@@ -19,18 +19,24 @@ tools
 */
 
 //chiedo il numero di km da percorrere
-const kmPercorsi = prompt('Ciao, quanti chilometri devi percorrere?');
+const kmPercorsi = Number(prompt('Ciao, quanti chilometri devi percorrere?'));
 console.log(kmPercorsi);
 
 //chiedo quanti anni ha il passeggero
-const etaPasseggero = prompt('Quanti anni hai?')
+const etaPasseggero = Number(prompt('Quanti anni hai?'));
 console.log(etaPasseggero);
 
 //calcolo il prezzo del biglietto sulla base di 0.21 € al km
-const prezzoBiglietto = (kmPercorsi * 0.21)
+const prezzoBiglietto = (kmPercorsi * 0.21);
 console.log(prezzoBiglietto);
 
+let prezzoFinale;
+
 //i minorenni pagano il 20% in meno
+if(etaPasseggero < 18){
+    const prezzoBigliettoMinori = prezzoBiglietto - 20 %
+    console.log(prezzoBigliettoMinori);
+}
 
 //gli over 65 pagano il 40% in meno
 
